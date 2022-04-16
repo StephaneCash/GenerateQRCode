@@ -56,7 +56,7 @@ function MainContent() {
     return (
 
         <div className='col-12' style={{ marginTop: '100px' }}>
-            <div className="row">
+            <div className="d-flex dFlex">
                 <div className="col-3">
                     <TextField
                         type="file"
@@ -86,12 +86,12 @@ function MainContent() {
                         <img src={imgUrl} alt='Code QR attestation' />
                     </a> : null}
                 </div>
-                <div className="col-9">
+                <div className="col-9" style={{border:"1px solid blue", width:'auto'}}>
                     {
                         etatBtn ?
                             text !== "" ?
                                 <div>
-                                    <img src={text} />
+                                    <img src={text} className="imgConvert"/>
                                     <img src={imgUrl} alt='Code QR attestation' className="imgQR" />
 
                                 </div> :
