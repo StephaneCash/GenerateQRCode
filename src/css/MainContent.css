@@ -2,8 +2,8 @@ canvas{
     position:absolute;
     height: auto;
     width: auto !important;
-    right: 70px;
-    bottom: 20px;
+    right: 190px;
+    bottom: -40px;
     text-align: center;
     line-height: 40px;
     z-index: 9999;
