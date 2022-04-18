@@ -24,7 +24,7 @@ function MainContent() {
         <QRCode
             id="qrCodeId"
             size={90}
-            value={"https://firebasestorage.googleapis.com/v0/b/gerenaretecodeqr.appspot.com/o/images%2F(1)Banza_Nkasa_AttestationDeReussite_2021.pdf?alt=media&token=6cf2d3dd-a986-488d-a571-e7e9c7bed2eb"}
+            value={text}
             bgColor="white"
             fgColor="black"
             level="L"
@@ -64,7 +64,7 @@ function MainContent() {
 
         <div className='col-12' style={{ marginTop: '100px' }}>
             <div className="d-flex dFlex">
-                <div className="col-3">
+                <div className="col-2">
                     <TextField
                         type="file"
                         label="Entrer votre secret"
@@ -91,18 +91,26 @@ function MainContent() {
                     <br /> <br />
                     {imgUrl ? <a href={imgUrl} download>
                         {qrCode}
-                    </a> : qrCode}
+                    </a> : ""}
                 </div>
-                <div className="col-9" style={{ border: "1px solid blue", width: 'auto' }}>
-                    
+                <div className="col-10" style={{ border: "1px solid blue", width: 'auto' }}>
+                    {
+                        etatBtn ?
+                            text ?
                                 <div>
                                     <img src={AttUse} className="imgConvert" />
-                                
-                                        {qrCode}
+                                    {qrCode}
 
-                                </div> :
-                                <h5 className="text-center mt-3"><Load /></h5>
-                     
+                                </div> : <Load />
+                            : <h5 className="p-5" style={{ textAlign: "center" }}>
+                                Votre Image sera affichée ici
+                            </h5>
+                    }
+
+                    <h5 className="text-center mt-3">
+                        {etatBtn ? "" : ""}
+                    </h5>
+
                 </div>
             </div>
         </div>
