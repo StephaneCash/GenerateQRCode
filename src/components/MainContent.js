@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Button, TextField } from '@mui/material';
-import QRCode from "qrcode";
+import QRCode from "qrcode.react";
 import { storage } from '../ConfigFirebase';
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 import { v4 } from 'uuid';
 import Load from "./Load";
 import '../css/MainContent.css';
+import AttUse from "../AttUse.gif"
 
 function MainContent() {
 
@@ -16,13 +17,19 @@ function MainContent() {
     const [etatBtn, setEtatBtn] = useState(false);
 
     const generateCodeQr = async () => {
-        try {
-            const resp = await QRCode.toDataURL(text);
-            setImageUrl(resp);
-        } catch (error) {
-            console.log(error)
-        }
+        setEtatBtn(true)
     }
+
+    const qrCode = (
+        <QRCode
+            id="qrCodeId"
+            size={90}
+            value={"https://firebasestorage.googleapis.com/v0/b/gerenaretecodeqr.appspot.com/o/images%2F(1)Banza_Nkasa_AttestationDeReussite_2021.pdf?alt=media&token=6cf2d3dd-a986-488d-a571-e7e9c7bed2eb"}
+            bgColor="white"
+            fgColor="black"
+            level="L"
+        />
+    )
 
     const hanldeImage = (e) => {
         setImgUpload(e.target.files[0]);
@@ -83,21 +90,19 @@ function MainContent() {
 
                     <br /> <br />
                     {imgUrl ? <a href={imgUrl} download>
-                        <img src={imgUrl} alt='Code QR attestation' />
-                    </a> : null}
+                        {qrCode}
+                    </a> : qrCode}
                 </div>
-                <div className="col-9" style={{border:"1px solid blue", width:'auto'}}>
-                    {
-                        etatBtn ?
-                            text !== "" ?
+                <div className="col-9" style={{ border: "1px solid blue", width: 'auto' }}>
+                    
                                 <div>
-                                    <img src={text} className="imgConvert"/>
-                                    <img src={imgUrl} alt='Code QR attestation' className="imgQR" />
+                                    <img src={AttUse} className="imgConvert" />
+                                
+                                        {qrCode}
 
                                 </div> :
                                 <h5 className="text-center mt-3"><Load /></h5>
-                            : ""
-                    }
+                     
                 </div>
             </div>
         </div>

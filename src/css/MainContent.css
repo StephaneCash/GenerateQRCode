@@ -1,15 +1,19 @@
-.imgQR{
+canvas{
     position:absolute;
-    height: 80px;
-    width: auto;
-    right: 184px;
-    bottom: 40px;
+    height: auto;
+    width: auto !important;
+    right: 70px;
+    bottom: 20px;
     text-align: center;
     line-height: 40px;
     z-index: 9999;
     font-size: 35px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.imgConvert{
+    width: auto !important;
 }
 
 .col-9{
