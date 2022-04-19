@@ -94,6 +94,7 @@ function MainContent() {
                     </a> : ""}
                 </div>
                 <div className="col-10" style={{ border: "1px solid blue", width: 'auto' }}>
+                    
                     {
                         etatBtn ?
                             text ?
