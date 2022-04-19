@@ -61,7 +61,6 @@ function MainContent() {
     }, [])
 
     return (
-
         <div className='col-12' style={{ marginTop: '100px' }}>
             <div className="d-flex dFlex">
                 <div className="col-2">
@@ -93,7 +92,7 @@ function MainContent() {
                         {qrCode}
                     </a> : ""}
                 </div>
-                
+
                 <div className="col-10" style={{ border: "1px solid blue", width: 'auto' }}>
 
                     {
