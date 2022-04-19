@@ -105,7 +105,7 @@ function MainContent() {
                             : <h5 className="p-5" style={{ textAlign: "center" }}>
                                 Votre Image sera affichée ici
                             </h5>
-                    }
+                    } 
 
                     <h5 className="text-center mt-3">
                         {etatBtn ? "" : ""}
