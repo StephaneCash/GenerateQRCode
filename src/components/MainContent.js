@@ -106,7 +106,7 @@ function MainContent() {
                                 Votre Image sera affichée ici
                             </h5>
                     } 
-                    
+                
                     <h5 className="text-center mt-3">
                         {etatBtn ? "" : ""}
                     </h5>
