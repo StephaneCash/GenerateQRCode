@@ -45,7 +45,7 @@ function MainContent() {
             getDownloadURL(snaphsot.ref).then((url) => {
                 setImgList((prev) => [...prev, url])
                 setText(url)
-            })
+            })  
         }) 
     }
 
