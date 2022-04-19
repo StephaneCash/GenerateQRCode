@@ -29,7 +29,7 @@ function MainContent() {
             fgColor="black"
             level="L"
         />
-    )
+    ) 
 
     const hanldeImage = (e) => {
         setImgUpload(e.target.files[0]);
