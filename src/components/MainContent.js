@@ -46,7 +46,7 @@ function MainContent() {
                 setImgList((prev) => [...prev, url])
                 setText(url)
             })
-        })
+        }) 
     }
 
     useEffect(() => {
