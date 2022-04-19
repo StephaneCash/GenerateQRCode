@@ -47,7 +47,7 @@ function MainContent() {
                 setText(url)
             })  
         })  
-    }
+    } 
      
     useEffect(() => {
         listAll(imgListRef).then((resp) => {
