@@ -19,7 +19,7 @@ function MainContent() {
     const generateCodeQr = async () => {
         setEtatBtn(true)
     }
-
+ 
     const qrCode = (
         <QRCode
             id="qrCodeId"
