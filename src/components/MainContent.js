@@ -6,7 +6,7 @@ import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 import { v4 } from 'uuid';
 import Load from "./Load";
 import '../css/MainContent.css';
-import AttUse from "../AttUse.gif"
+import AttUse from "../AttUse.gif";
 
 function MainContent() {
 
