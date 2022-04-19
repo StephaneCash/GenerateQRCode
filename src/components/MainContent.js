@@ -59,7 +59,7 @@ function MainContent() {
             console.log(imgList)
         })
     }, []) 
-
+ 
     return (
         <div className='col-12' style={{ marginTop: '100px' }}>
             <div className="d-flex dFlex">
