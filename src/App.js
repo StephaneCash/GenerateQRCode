@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       <div className="container mt-3"> 
         <MainContent />
-      </div>
+      </div> 
     </>
   );
 }
