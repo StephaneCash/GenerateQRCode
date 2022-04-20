@@ -6,7 +6,7 @@ import MainContent from './components/MainContent';
 
 function App() {
 
-  return (
+  return ( 
     <>
       <NavBar />
       <div className="container mt-3"> 
