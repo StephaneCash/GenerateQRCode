@@ -12,7 +12,7 @@ function App() {
       <div className="container mt-3"> 
         <MainContent />
       </div> 
-    </>
+    </> 
   );
 }
 
