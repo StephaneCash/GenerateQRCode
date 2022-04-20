@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="container mt-3">
+      <div className="container mt-3"> 
         <MainContent />
       </div>
     </>
